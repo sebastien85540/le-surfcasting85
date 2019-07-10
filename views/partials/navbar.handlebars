@@ -1,0 +1,88 @@
+<script>
+
+</script>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 style="font-size: 2em">Le Surfcasting en Vendée</h1>
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+
+    </div>
+    {{#if user}}
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="menu-link" href="/articles/add">
+              Ajouter un article
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="menu-link" href="/user/logout">
+            Se deconnecter
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="menu-link" href="/articles">
+            Les articles
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <img src="{{utilisateur.profilePic}}" alt="profil-image" class="image is-96x96"width="28" height="28">
+
+      </div>
+    </div>
+    {{else}}
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="menu-link" href="/user/login">
+            Se connecter
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="menu-link" href="/user/create">
+            S'inscrire
+          </a>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="menu-link" href="/contact">
+          Contactez nous
+        </a>
+      </div>
+    </div>
+  </div>
+
+</nav>

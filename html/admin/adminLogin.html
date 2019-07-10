@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- ====================================== HEAD =========================================== -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Surfcasting en vendée</title>
+    <meta name="description" content="site dédié au surfcasting en vendée.">
+
+    <!--                             STYLE                                                     -->
+    <link rel="stylesheet" href="../../public/resources/css/style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<!-- ================================= BODY ================================= -->
+<body>
+    <!-- ================================== NAVBAR ================================ -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="container">
+                  <div class="navbar-brand">
+                    <a class="navbar-item" href="../index.html">
+                      <h1 style="font-size: 2em">Le Surfcasting en Vendée</h1>
+                    </a>
+            
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                    </a>
+                    
+                  </div>
+                  <div id="navbarBasicExample" class="navbar-menu">
+                    
+                    <div class="navbar-end">
+                      <div class="navbar-item">
+                        <div class="buttons">
+                          <a class="menu-link" href="../users/login.html">
+                            Se connecter
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="navbar-end">
+                      <div class="navbar-item">
+                        <div class="buttons">
+                          <a class="menu-link" href="../users/register.html">
+                            S'inscrire
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="navbar-end">
+                      <div class="navbar-item">
+                        <div class="buttons">
+                          <a class="menu-link" href="../users/contact.html">
+                            Contactez nous
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+            
+              </nav>
+              <!-- ====================================== ACCUEIL ========================================== -->
+              <section class="section login">
+                    <div class="container is-fullhd">
+                        <form action="/html/adminPannel.html" method="GET" enctype="text/plain">
+                            <br>
+                            <div class="field">
+                                    <label class="label">Nom d'Usager</label>
+                                    <div class="control has-icons-left has-icons-right">
+                                        <input class="input is-success" type="text" placeholder="Text input" name="userName">
+                                        
+                                    </div>
+                                </div>
+                            <br>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input class="input" type="password" placeholder="Password" name="password">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <br>
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button class="button is-link">Connecter</button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-text">Annuler</button>
+                                </div>
+                            </div>
+                            <br>
+                            <a href="/html/motDePasse.html">Mot de passe oublié</a>
+                        </form>
+                    </div>
+                </section>
+    <!-- ============================================= FOOTER ====================================================== -->
+    <footer class="footer" style="background-color: black"
+            <p class="surf is-white" style="text-align: center" style="color: white">
+              2019 Surfcasting en vendée | <a href="noreferrer" title="mention légale" style="color: #ff0000">Mention légale</a>
+            </p>
+            <p class="surf is-white" style="text-align: center" style="color: white">vous pouvez visiter mon site <a href="http://reynaud-sebastien.fr">ici</a></p>
+          </footer>
+</body>
+<!--                              ICONS                                                    -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="//cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
+<!--                                                                                       -->
+<script>
+    var p = $('#dash p');
+    var ks = $('#dash').height();
+    while ($(p).outerHeight() > ks) {
+        $(p).text(function (index, text) {
+            return text.replace(/\W*\s(\S)*$/, '...');
+        });
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        //  Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+    // TOGGLE
+    $(document).ready(function () {
+
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function () {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+{{!-- Edition d'un article --}}
+
+{{!-- <section class="section">
+    <div class="container">
+        <h1 class="title">{{article.title}}</h1>
+          <div class="card-image">
+            <figure class="image">
+              <img src="{{article.image}}" alt="image">
+            </figure>
+          </div>
+        <p class="content">{{{article.content}}}</p>
+    </div>
+</section> --}}
+
+
+<section class="section">
+  <div class="container is-fullhd">
+    <form action="/articleEditPost/{{article._id}}" method="post" enctype="multipart/form-data">
+      <div class="field">
+        <label class="label">Titre</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" value={{article.title}} name="title">
+        </div>
+      </div>
+      <img src={{article.image}} alt="img">
+      <div class="field">
+        <label class="label">Texte</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea" value={{article.content}} name="content" >{{{article.content}}}</textarea>
+          <script>
+            CKEDITOR.replace('content');
+          </script>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Auteur</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" value={{article.author}} name="author">
+        </div>
+      </div>
+      <div class="file">
+        <label class="file-label">
+          <input class="file-input" type="file" name="image">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              choisissez une image format jpg
+            </span>
+          </span>
+        </label>
+      </div>
+      <a href=""><i class="fas fa-edit"></i>
+      <i class="fas fa-trash-alt"></i>
+      <br>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Envoyer</button>
+        </div>
+        <div class="control">
+          <button class="button is-text">Annuler</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

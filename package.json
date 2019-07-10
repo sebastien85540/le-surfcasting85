@@ -1,0 +1,37 @@
+{
+  "name": "surfcasting",
+  "version": "1.0.0",
+  "description": "site sur le surfcasting en vendée",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastien85540/surfcasting.git"
+  },
+  "author": "sebastien REYNAUD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://sebastien85540.github.io/surfcasting/"
+  },
+  "homepage": "https://github.com/sebastien85540/surfcasting#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.3",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "handlebars-helpers": "^0.10.0",
+    "handlebars.moment": "^1.0.4",
+    "mongodb": "^3.2.4",
+    "mongoose": "^5.5.6",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.2.1",
+    "nodemon": "^1.19.1"
+  }
+}

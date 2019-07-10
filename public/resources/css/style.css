@@ -1,0 +1,326 @@
+/*********************************************************
+*****                   STYLE                         ****
+*********************************************************/
+/*
+    - DOCUMENT: Surfcasting
+    - VERSION:  1.0.0
+    - AUTHOR:   Sebastien REYNAUD
+*/
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.card-content {
+    height: 300px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+
+/*********************************************************
+*****                   NAVBAR                        ****
+*********************************************************/
+.navbar-start {
+    text-align: center !important;
+}
+
+/*********************************************************
+*****                   ACCUEIL                       ****
+*********************************************************/
+.accueil {
+    background-image: url(../images/coucher2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 87vh !important;
+
+}
+
+.accueil h1 {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.accueil p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*********************************************************
+*****                   CONTACT                       ****
+*********************************************************/
+
+.contact {
+    background-color: rgb(116, 245, 228);
+}
+
+/*********************************************************
+*****                   FOOTER                       ****
+*********************************************************/
+
+
+.footer {
+    padding: 0 !important;
+    background-color: #000000 !important;
+    text-align: center !important;
+    color: #fff !important;
+}
+
+.surf {
+    color: #fff;
+    text-align: center;
+}
+
+/*********************************************************
+*****                   ERROR 404                     ****
+*********************************************************/
+
+.error {
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-size: cover;
+}
+
+/*********************************************************
+*****               LIMIT TEXT CARD                   ****
+*********************************************************/
+#dash {
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+#dash p {
+    padding: 10px;
+    margin: 0 !important;
+}
+
+/*********************************************************
+*****             ARTICLESPAGE                        ****
+*********************************************************/
+.articlesPage {
+    padding: 0;
+    margin: 0;
+}
+
+/*======================================================== ARTICLEs =======================================================*/
+/*********************************************************
+*****             ARTICLEADD                        ****
+*********************************************************/
+.is-fullhd {
+    padding-bottom: 100px;
+}
+
+/*********************************************************
+*****             ARTICLE EDIT                        ****
+*********************************************************/
+
+
+
+/*********************************************************
+*****             LOGIN                               ****
+*********************************************************/
+
+.section.login {
+    padding-bottom: 198px;
+}
+
+/*********************************************************
+*****             PANNEL                              ****
+*********************************************************/
+
+input {
+    margin-bottom: 10px;
+}
+
+table {
+    border: 2px solid #000000;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+
+}
+
+#name {
+    margin-bottom: 15px;
+    margin-right: 40px;
+    margin-left: 2px;
+    margin-top: 100px;
+}
+
+#email {
+    margin-bottom: 30px;
+}
+
+/*********************************************************
+*****             MESSAGE ENVOYE                      ****
+*********************************************************/
+
+.card-message {
+    padding: 37px;
+}
+
+
+/********************************************************
+*******                COMMENTAIRES               *******
+********************************************************/
+
+.user_avatar {
+    width: 65px;
+    height: 65px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.comment_block {
+    width: 65%;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.create_new_comment {
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+.input_comment {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-left: 10px;
+    width: calc(100% - 75px);
+
+}
+
+input[type="text"] {
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.3rem;
+
+    padding: 10px;
+
+    border: none;
+    border-bottom: 2px solid lighten(GREY, 15%);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom: 2px solid lighten(GREY, 10%);
+}
+
+.new_comment {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    border-top: 1px solid lighten(GREY, 10%);
+}
+
+.user_comment {
+    list-style-type: none;
+}
+
+.comment_body {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: calc(100% - 75px);
+    min-height: 65px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: .9rem;
+    color: #555;
+    background-color: WHITE;
+    border-bottom: 2px solid lighten(GREY, 15%);
+}
+
+.replied_to {
+    margin: 5px 0px;
+    background-color: lighten(GREY, 18%);
+    border-bottom: 2px solid lighten(GREY, 15%);
+    border-radius: 5px;
+}
+
+.replied_to p {
+    padding: 5px;
+}
+
+.replied_to span {
+    color: BLUE;
+    margin-right: 2px;
+}
+
+.comment_toolbar {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 75px;
+    font-size: 0;
+}
+
+li {
+    display: inline-block;
+    padding: 5px;
+    font-size: .7rem;
+    color: lighten(GREY, 5%);
+}
+
+li,
+ul:hover {
+    cursor: pointer;
+}
+
+.comment_details {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    text-align: left;
+}
+
+.comment_tools {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    text-align: right;
+}
+
+.comment_tools li :hover{
+            color: GREY;
+        }
+        
+
+/* replies*/
+
+
+.user :hover{
+     
+        color: BLUE;
+        text-decoration: underline;
+    }
+
+
+.love :hover{
+    
+        color: RED;
+    }

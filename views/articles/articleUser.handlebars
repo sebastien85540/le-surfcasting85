@@ -1,0 +1,27 @@
+<section class="article-user">
+    <div class="container">
+        <h1>Mes articles</h1>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Titre</th>
+                        <th>Contenu</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{article._id}}</td>
+                        <td><img src="{{article.image}}" alt="image" class="image is-32x32"></td>
+                        <td>{{article.title}}</td>
+                        <td>{{article.content}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
