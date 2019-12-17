@@ -1,5 +1,5 @@
-// module.exports = {
-//     stripTags : function (input) {
-//         return input.replace(/<(?:.|\n)*?>/gm,'')
-//     }
-// }
+module.exports = {
+    stripTags : function (input) {
+        return input.replace(/<(?:.|\n)*?>/gm,'')
+    }
+}

@@ -1,0 +1,75 @@
+/******************************************************************************
+    ***********              MEDIA QUERIES                                *********
+    ******************************************************************************/
+    @media screen and (max-width: 700px) {
+        .txt {
+            font-size: 33px !important;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        .level-right.content{
+            font-size: 20px;
+            text-align: justify;
+            margin-top: 5px;
+        }
+        h1{
+            font-size: 100% !important;
+        }
+        .navbar-burger {
+            width: 22.25rem;
+        }
+        img{
+            left:10% !important;
+        }
+        .level{
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .article-pic{
+            height: 250px !important;
+            width: 250px !important;
+            
+        }
+/*==========================================
+                  RESPONSIVE TABLEAUX
+ ===========================================*/
+/* @media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) { */
+  /* Forcer le tableau à ne plus être comme un tableau */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  /* Masquer les en-têtes de tableau */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Se comporter comme une "rangée" */
+    border: none;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    position: relative;
+  }
+  td:before {
+    /* Maintenant, comme un en-tête de tableau */
+    position: absolute;
+    /*Les valeurs haut / gauche imitent le remplissage*/
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+        
+    /* } */

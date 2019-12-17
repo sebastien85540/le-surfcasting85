@@ -1,6 +1,7 @@
 {{!--  Register user --}}
 
 <section class="section">
+    <div class="marge" style="margin-top: 100px"></div>
     <div class="container is-fullhd">
         <div class="content">
             <ol type="1">
@@ -27,7 +28,8 @@
             <div class="field">
                 <label class="label">Nom d'Usager</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-success" type="text" placeholder="Text input" name="userName" value={{data.userName}}>
+                    <input class="input is-success" type="text" placeholder="Text input" name="userName"
+                        value={{data.userName}}>
                     <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                     </span>
@@ -49,25 +51,36 @@
 
             <div class="field">
                 <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Password" name="password" value={{data.password}}>
+                    <input class="input" type="password" placeholder="Password" name="password">
                     <span class="icon is-small is-left">
                         <i class="fas fa-lock"></i>
                     </span>
                 </p>
             </div>
-            
+            {{!-- <div class="file">
+                <label class="file-label">
+                    <input class="file-input" type="file" value="profilePic" name="profilePic">
+                    <span class="file-cta">
+                        <span class="file-icon">
+                            <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                            choisissez une image format jpg
+                        </span>
+                    </span>  
+                </label>
+            </div> --}}
+
             <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link">Enregistrer</button>
+                    <button type="submit" class="button is-link">Enregistrer</button>
                 </div>
-                </form>
+        </form>
 
-                <form action="/" method="get">
-                <div class="control">
-                    <button class="button is-text">Annuler</button>
-                </div>
-                </form>
+        <form action="/" method="get">
+            <div class="control">
+                <button class="button is-text">Annuler</button>
             </div>
-        
+        </form>
     </div>
 </section>

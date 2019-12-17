@@ -1,0 +1,46 @@
+<section id="pannel" class="pannel" style="height: 90vh;">
+
+    <div class="container">
+        <h1 class="title  is-1 has-text-danger">Votre profil</h1>
+        <form action="/profile/edit/post/{{utilisateur.id}}" method="POST" enctype="multipart/form-data">
+            <div class="columns">
+                <div class="column">
+                    <label for="name" class="name">Name</label>
+                    <input type="text" name="name" id="name" value="{{utilisateur.name}}" class="name">
+                    <label for="surname" class="surname">Prénom</label>
+                    <input type="text" name="surname" id="surname" value="{{utilisateur.surname}}">
+                    <label for="email" class="email">Email</label>
+                    <input type="email" name="email" id="email" value="{{utilisateur.email}}">
+                    <br>
+                    <label for="content">Un petit Mot</label>
+                    <textarea class="textarea" rows="10" cols="20"
+                        name="profileMessage">{{stripTags utilisateur.profileMessage}}</textarea>
+                        <script>
+                        CKEDITOR.replace( 'profileMessage' );
+                </script>
+                </div>
+                <div class="column">
+                    <h4>Votre photo</h4>
+                    <img src="{{utilisateur.profilePic}}" class="image is-48x48 is-rounded" alt="user">
+                    <div class="file">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="profilePic">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                    choisissez une image format jpg
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button class="btn pannel" type="submit">Enregistrer</button>
+        </form>
+    <form action="/profile" method="get"><button type="submit">Annuler</button>
+    </form>
+    </div>
+
+</section>

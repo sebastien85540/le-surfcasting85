@@ -1,0 +1,43 @@
+<section id="pannel" class="pannel" style="height: 74vh;">
+    <div class="marge" style="margin-top: 100px"></div>
+
+    <div class="container">
+        <h1 class="title  is-1 has-text-danger">Votre profil</h1>
+        <div class="columns">
+            <div class="column">
+                <label for="name" class="name">Nom : {{utilisateur.name}}</label>
+                <br>
+                <label for="surname" class="surname">Prénom : {{utilisateur.surname}}</label>
+                <br>
+                <label for="email" class="email">Email: {{utilisateur.email}}</label>
+                <br>
+                <label for="content">Biographie : {{utilisateur.profileMessage}}</label>
+            </div>
+            <div class="column">
+                <h4>Votre photo</h4>
+                <img src="{{utilisateur.profilePic}}" class="image" alt="profilePic">
+                
+            </div>
+        </div>
+        <a href="/profile/edit"><button class="btn">Modifier</button></a>
+        <a onclick="deleteUser()"><button class="btn">Supprimer mon compte</button></a>
+        {{#if admin}}
+        <a href="/admin/articles-pannel" class="btn pannel"><button>Les articles</button></a>
+        <a href="/admin/users-pannel" class="btn pannel"><button>utilisateurs</button></a>
+        {{else}}
+        {{!-- <a href="/user/articles" class="btn pannel"><button>Mes Articles</button></a> --}}
+        {{/if}}
+        <script>
+                            function deleteUser() {
+                                if (confirm("Voulez-vous supprimer votre compte ?")) {
+                                    window.location.replace(`/delete/user/{{utilisateur.id}}`)
+                                   // res.redirect('/user/create')
+                                } else {
+                                    windows.location.replace(`/profile`)
+                                }
+                            }
+                        </script>
+
+    </div>
+
+</section>

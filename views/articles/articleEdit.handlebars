@@ -15,7 +15,7 @@
 
 <section class="section">
   <div class="container is-fullhd">
-    <form action="/articleEditPost/{{article._id}}" method="post" enctype="multipart/form-data">
+    <form action="/article/edit/post/{{article.id}}" method="POST" enctype="multipart/form-data">
       <div class="field">
         <label class="label">Titre</label>
         <div class="control">
@@ -26,7 +26,7 @@
       <div class="field">
         <label class="label">Texte</label>
         <div class="control">
-          <textarea class="textarea" placeholder="Textarea" value={{article.content}} name="content" >{{{article.content}}}</textarea>
+          <textarea class="textarea" placeholder="Textarea" name="content" >{{{stripTags article.content}}}</textarea>
           <script>
             CKEDITOR.replace('content');
           </script>
@@ -56,12 +56,14 @@
       <br>
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link">Envoyer</button>
-        </div>
-        <div class="control">
-          <button class="button is-text">Annuler</button>
+          <button class="button is-link" type="submit">Envoyer</button>
         </div>
       </div>
     </form>
+    <form action="/articles" method="get">
+        <div class="control">
+          <button class="button is-text">Annuler</button>
+        </div>
+      </form>
   </div>
 </section>

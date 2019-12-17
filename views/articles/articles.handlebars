@@ -1,32 +1,17 @@
 {{!-- article example --}}
 
 <section class="section">
+  <div class="marge" style="margin-top: 100px"></div>
     <div class="container">
       <div class="card">
         <h1 class="title">{{article.title}}</h1>
           <div class="card-image">
-            <figure class="image is-5by4">
+            <figure class="image image is-square">
               <img src="{{article.image}}" alt="image">
             </figure>
           </div>
-        <p class="card-content content">{{{article.content}}}</p>
+        <p class="card-content content">{{{stripTags article.content}}}</p>
         </div>
     </div>
-    <div class="container">
-      <h2 style="text-align: center">Commentaires</h2>
-      <div class="colums comment-block">
-        <div class="column comment">
-          <img src="{{user.image}}" alt="user-image">
-          <div class="user-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ullam?</div>
-        </div>
-        <div class="column comment">
-          <img src="{{user.image}}" alt="user-image">
-          <div class="user-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ullam?</div>
-        </div>
-        <div class="column comment">
-          <img src="{{user.image}}" alt="user-image">
-          <div class="user-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ullam?</div>
-        </div>
-      </div>
-    </div>
+    
 </section>

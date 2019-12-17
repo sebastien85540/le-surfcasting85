@@ -1,39 +1,26 @@
 {{!--  Contact form --}}
 
-<section id="contact" class="contact">
+<section id="contact" class="contact" style="height :76vh">
+  <div class="marge" style="margin-top: 85px"></div>
   <div class="container">
-    <form action="mailto:sebastien.reynaud123@orange.fr" method="POST" enctype="text/plain">
-  <br>
+    <form action="/contact" method="POST">
       <div class="field">
         <label class="label">Nom</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Text input">
+          <input class="input" type="text" placeholder="Text input" name="name" id="toto">
         </div>
       </div>
       <div class="field">
         <label class="label">Prenom</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Text input">
+          <input class="input" type="text" placeholder="Text input" name="surname">
         </div>
       </div>
-
-      <div class="field">
-        <label class="label">Nom d'utilisateur</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-success" type="text" placeholder="Text input">
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </div>
-      </div>
-
+      
       <div class="field">
         <label class="label">Email</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-danger" type="email" placeholder="Email input">
+          <input class="input is-danger" type="email" placeholder="Email input" name="email">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -47,7 +34,7 @@
         <label class="label">Sujet</label>
         <div class="control">
           <div class="select">
-            <select>
+            <select name="select">
               <option>Problèmes Techniques</option>
               <option>Plaintes</option>
               <option>Autre</option>
@@ -59,7 +46,7 @@
       <div class="field">
         <label class="label">Message</label>
         <div class="control">
-          <textarea class="textarea" placeholder="Textarea"></textarea>
+          <textarea class="textarea" placeholder="Textarea" name="message"></textarea>
         </div>
       </div>
   <br>

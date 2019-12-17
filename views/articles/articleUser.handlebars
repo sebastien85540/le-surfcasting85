@@ -1,6 +1,7 @@
 <section class="article-user">
     <div class="container">
         <h1>Mes articles</h1>
+        {{#user}}
         <div class="container">
             <table class="table">
                 <thead>
@@ -17,11 +18,12 @@
                         <td>{{article._id}}</td>
                         <td><img src="{{article.image}}" alt="image" class="image is-32x32"></td>
                         <td>{{article.title}}</td>
-                        <td>{{article.content}}</td>
+                        <td>{{stripTags article.content}}</td>
                         <td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        {{/user}}
     </div>
 </section>

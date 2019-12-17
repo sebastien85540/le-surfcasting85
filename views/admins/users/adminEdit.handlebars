@@ -1,0 +1,34 @@
+<section id="pannel" class="pannel" style="height: 90vh;">
+
+    <div class="container">
+        <h1 class="title  is-1 has-text-danger">Editer un utilisateur</h1>
+        <form action="/admin/edit/post/{{utilisateur._id}}" method="POST" enctype="multipart/form-data">
+            <div class="columns">
+                <div class="column">
+                    <label for="name" class="name">Name</label>
+                    <input type="text" name="name" id="name" value="{{utilisateur.name}}" class="name">
+                    <label for="surname" class="surname">Prénom</label>
+                    <input type="text" name="surname" id="surname" value="{{utilisateur.surname}}">
+                    <label for="email" class="email">Email</label>
+                    <input type="email" name="email" id="email" value="{{utilisateur.email}}">
+                    <label for="userName" class="userName">pseudo</label>
+                    <input type="text" name="userName" id="userName" value="{{utilisateur.userName}}">
+                    <div class="field">
+                        <label class="accountType">accountType</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="accountType" value="{{utilisateur.accountType}}">
+                                    <option value="admin">Administrateur</option>
+                                    <option value="user">Utilisateur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn pannel" type="submit">Enregistrer</button>
+        </form>
+
+    </div>
+
+</section>

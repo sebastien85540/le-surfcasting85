@@ -1,82 +1,156 @@
 {{!-- Main --}}
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Surfcasting en vendée</title>
-    <meta name="description" content="site dédié au surfcasting en vendée.">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TTPXGFC');</script>
+  <!-- End Google Tag Manager -->
 
-    <!--                             STYLE                                                     -->
-    <link rel="stylesheet" href="resources/css/style.css">
-      
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146233305-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-146233305-2');
+  </script>
+  <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
+  <script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "lmù;k,jnbgfd",
+  "author" : {
+    "@type" : "Person",
+    "name" : "cvbn,;:mlkjhgf"
+  },
+  "datePublished" : "2019-08-22",
+  "image" : "https://le-surfcasting85.reynaud-sebastien.fr/articles/mushroom-2.jpg",
+  "articleBody" : "dfghjklmùmlkjhgfd",
+  "url" : "https://le-surfcasting85.reynaud-sebastien.fr/articles/5d5e81986e3cbb757f8a2e1f"
+}
+</script>
+  {{!-- <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146233305-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-146233305-2');
+  </script> --}}
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>{{title}} - Surfcasting en vendée</title>
+  <link rel="shortcut icon" type="image/ico" href="resources/images/favicon.ico" />
+  <meta name="description" content="site dédié aux pêcheurs de surfcasting sur la vendée">
+  <meta name="keywords" content="peche,loisir,surfcasting,vendée,85,plage,poissons,canne à pêche">
+  <meta name="author" content="le-surfcasting85">
+  <!--                             STYLE                                                     -->
+  <link rel="stylesheet" href="/resources/css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 1024px)" href="/resources/css/style-1024.css">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="/resources/css/style-700.css">
+ {{!-- <link rel="stylesheet" media="screen and (max-width: 700px)" href="ressources/css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 1024px)" href="ressources/css/style.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src https:">--}}
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  {{!-- <script src="//cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script> --}}
 </head>
-  <body>
-{{> navbar}}
 
-{{{body}}}
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTPXGFC" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {{> navbar}}
 
-{{> footer}}
+  {{{body}}}
 
-    <!--                              ICONS                                                    -->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="//cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
-    <!--                                                                                       -->
-    <script>
+  {{> footer}}
+  {{!-- script div limit text --}}
+  <script>
     var p = $('#dash p');
     var ks = $('#dash').height();
     while ($(p).outerHeight() > ks) {
-        $(p).text(function (index, text) {
-            return text.replace(/\W*\s(\S)*$/, '...');
-        });
+      $(p).text(function (index, text) {
+        return text.replace(/\W*\s(\S)*$/, '...');
+      });
     }
-</script>
-<script>
+  </script>
+
+  <!--                              ICONS                                                    -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="//cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
+  <!--                                                                                       -->
+  <script>
+    var p = $('#dash p');
+    var ks = $('#dash').height();
+    while ($(p).outerHeight() > ks) {
+      $(p).text(function (index, text) {
+        return text.replace(/\W*\s(\S)*$/, '...');
+      });
+    }
+  </script>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
 
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+    // TOGGLE
+    $(document).ready(function () {
+
+      // Check for click events on the navbar burger icon
+      $(".navbar-burger").click(function () {
 
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
 
       });
     });
-  }
-
-});
-// TOGGLE
-$(document).ready(function() {
-
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-  });
-});
   </script>
 
 </body>
+
 </html>
 
 

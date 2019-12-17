@@ -1,0 +1,28 @@
+/******************************************************************************
+    ***********              MEDIA QUERIES                                *********
+    ******************************************************************************/
+
+    @media screen and (max-width: 1024px) {
+        .txt {
+            font-size: 100px !important;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        h1{
+            font-size: 200% !important;
+        }
+        img{
+            left:30% !important;
+        }
+        .level{
+            display: block;
+            margin: 20px;
+            
+        }
+        .article-pic{
+            height: 350px !important;
+            width: 350px !important;
+            
+        }
+        
+    }

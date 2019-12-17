@@ -32,7 +32,11 @@ const userSchema = new mongoose.Schema({
     },
     profilePic: {
        type: String,
-       default: '/profile-pics/defaultOne/default.png'
+       default: '/profile-pics/defaultOne/default.jpg'
+    },
+    profileMessage: {
+        type: String,
+        default: 'Bonjour, je suis nouveau !'
     }
 })
 userSchema.pre('save', function (next) {

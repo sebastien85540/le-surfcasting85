@@ -1,38 +1,31 @@
 {{!-- Home page --}}
 
-<section id="accueil" class="accueil">
- <h1>{{utilisateur.name}}</h1>
-  <div class="container">
-    <div class="columns is-multiline is-mobile">
-      {{#if user}}
-      {{#each (limit posts 3)}}
-      <div class="column is-3">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-square">
-              <img src="{{image}}" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content" id="dash">
-            <div class="content">
-              <a href="/articles/{{_id}}">
-                <h2>{{title}}</h2>
-              </a>
-              <p>{{{content}}}</p>
-              <p>publié par {{author}}, le {{moment createDate format="DD / MM / YYYY"}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/each}}
-      {{else}}
-      <div class="container">
-          <h1 class="title  is-1 has-text-danger">Le Surfcasting en Vendée</h1>
-    <p class="subtitle is-2 has-text-danger">Bienvenue cher ami ce site est dispo pour poster tes photos, partager tes
-      prises et laisser un petit post sur tes expèriences.</p>
-      <p class="subtitle is-3 has-text-danger">Le site est ouvert à condition de s'inscrire, si vous n'êtes pas inscrits on vous attend.</p>
-      </div>
-      {{/if}}
+<section class="homePage-section">
+  {{!-- {{#if user}} --}}
+  {{#each posts}}
+  <div class="level level-articles">
+    <div class="level-left article-pic">
+      <img src="{{image}}" alt="Placeholder image">
+    </div>
+    <div class="level-right content">
+
+      <h2 class="article-title">{{title}}</h2>
+      <p>{{{stripTags content}}}</p>
+      <p>publié par {{author}}, le {{moment createDate format="DD / MM / YYYY"}}</p>
+      <button class="button is-link">
+        <a href="/articles/{{_id}}">
+          Lire
+        </a>
+      </button>
     </div>
   </div>
+  {{/each}}
+  {{!-- {{else}}
+      <div class="container">
+          <h1 class="title  is-1 has-text-danger txt">Le Surfcasting en Vendée</h1>
+    <p class="subtitle is-2 has-text-danger txt">Bienvenue cher ami ce site est dispo pour poster tes photos, partager tes
+      prises et laisser un petit post sur tes expèriences.</p>
+      <p class="subtitle is-3 has-text-danger txt">Le site est ouvert à condition de s'inscrire, si vous n'êtes pas inscrits on vous attend.</p>
+      </div>
+      {{/if}} --}}
 </section>

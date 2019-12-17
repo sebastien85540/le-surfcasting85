@@ -1,0 +1,34 @@
+<section class="section" style="height: 92vh">
+    <div class="container is-fullhd">
+        <div class="content">
+            <ol type="1">
+                {{#each errors}}
+                <li>{{this}}</li>
+                {{/each}}
+
+            </ol>
+        </div>
+        <form action="/passe-oublie/post/{{_id}}" method="POST" enctype="multipart/form-data">
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-danger" type="email" placeholder="Email input" name="email" value={{data.email}}>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Envoyer</button>
+                </div>
+            </div>
+        </form>
+        <form action="/user/login" method="get">
+            <div class="control">
+                <button class="button is-text">Annuler</button>
+            </div>
+        </form>
+    </div>
+</section>
