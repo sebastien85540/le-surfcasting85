@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/sebastien85540/surfcasting#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "express": "^4.16.4",
-    "express-fileupload": "^1.1.6",
+    "express-fileupload": "^1.4.0",
     "express-handlebars": "^3.0.2",
     "express-session": "^1.16.1",
     "handlebars-helpers": "^0.10.0",
@@ -33,6 +33,6 @@
     "mongoose": "^5.7.11",
     "morgan": "^1.9.1",
     "nodemailer": "^6.2.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^2.0.0"
   }
 }
